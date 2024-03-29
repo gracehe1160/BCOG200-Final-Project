@@ -33,6 +33,7 @@ jokes = [
 
 def main():
   // call the functions + conditionals + print statements
+  // make sure input is valid
 
 if __name__ == "__main__":
     main()
