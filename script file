@@ -1,5 +1,38 @@
 # Python script file: an outline of the functions/classes/methods that you will be constructing. 
 
+def CreatePersonality():
+  # create the chatbot with a specified name and personality
+  return chatbot
+
+def ReadInput():
+  #  process user input using NLTK
+  return tokens
+
+def GenerateResponse():
+  # generate a response
+  return response
 
 
+jokes = [
+  'A woman is walking home with her three daughters. 
+  Rose asks her mother, “Mom, why did you name me Rose?” 
+  To which her mother replies, “Well sweetie, when we were coming home from the hospital with you a rose fell on your head!” 
+  Lily, curious now, asks her mother “Mom, why did you name me after a flower too?”
+  To which her mother replies, “Well sweetie, when we were coming home from the hospital with you a lily fell on your head!”
+  Cinderblock says to her mother, “hghghdnbgh!!? dnbgh!??!"',
+  'The real joke is your mom.',
+  'A woman is sitting at her recently deceased husband’s funeral. A man leans in to her and asks, “Do you mind if I say a word?”.
+  “No, go right ahead”, the woman replies.
+  The man stands, clears his throat, says “Plethora”, and sits back down.
+  “Thanks”, the woman says, “that means a lot”.',
+  'Why did the half blind man fall into a well? He couldn’t see that well.',
+  'How do you think the unthinkable? With an itheberg.',
+  'The Lord said unto John, "Come forth and receive eternal life." But alas John came fifth, so he won the toaster.'
+  #add more jokes
+]
 
+def main():
+  // call the functions + conditionals + print statements
+
+if __name__ == "__main__":
+    main()
