@@ -1,1 +1,12 @@
+#initialize chatbot w name and personality
+chatbot = CreatePersonality("SarcasticBot")
 
+user_input = "(say hi or ask for a joke)"
+#pass the input through GenerateResponse()
+#print the results
+
+#test different types of user input ("tell me a joke" or "Bonjour je m'appelle grace"(should return error))
+
+#quit conversation
+
+#now chatbot has been tested
