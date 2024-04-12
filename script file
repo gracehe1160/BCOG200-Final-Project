@@ -49,6 +49,9 @@ def main():
   print('JokeBot: Hi there, I'm JokeBot!')
   while True:
     user_input = input('You: ')
+    if 'quit' in user_input.lower():
+        print('JokeBot: That's enough jokes for now, see ya!')
+        break
     processed_input = ReadInput(user_input)
     response = GenerateResponse(chatbot, processed_input, jokes)
     print('JokeBot: ', response)
