@@ -30,7 +30,7 @@ GenerateResponse(chatbot, user_input):
     
 Examples:
 
-chatbot = CreatePersonality("SarcasticBot")
+chatbot = CreatePersonality("JokeBot")
 
 user_input = "Tell me a joke"
 tokens = ReadInput(user_input)
