@@ -7,7 +7,7 @@ import random
 
 def CreatePersonality():
   # create the chatbot with a specified name and personality
-  chatbot = ChatBot('SarcasticBot', logic_adapters=[{'import_path':'chatterbot.logic.BestMatch'}],filters=['chatterbot.filters.RepetitiveResponseFilter'],prepocessors=['chatterbot.preprocessors.clean_whitesoace'])
+  chatbot = ChatBot('JokeBot', logic_adapters=[{'import_path':'chatterbot.logic.BestMatch'}],filters=['chatterbot.filters.RepetitiveResponseFilter'],prepocessors=['chatterbot.preprocessors.clean_whitesoace'])
   return chatbot
 
 def ReadInput(input_text):
