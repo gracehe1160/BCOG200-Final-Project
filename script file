@@ -2,38 +2,51 @@
 
 def CreatePersonality():
   # create the chatbot with a specified name and personality
+  chatbot = ChatBot('SarcasticBot', logic_adapters=[{'import_path':'chatterbot.logic.BestMatch'}],filters=['chatterbot.filters.RepetitiveResponseFilter'],prepocessors=['chatterbot.preprocessors.clean_whitesoace'])
   return chatbot
 
-def ReadInput():
+def ReadInput(input_text):
   #  process user input using NLTK
-  return tokens
+  stop_words = set(stopwords.words('english'))
+  tokens = word_tokenize(input_text)
+  filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
+  return filtered_tokens
 
-def GenerateResponse():
+def GenerateResponse(bot,user_input,jokes):
   # generate a response
+  if 'joke' in user_input:
+      response = random.choice(jokes)
+  else:
+      response = bot.get_response(user_input)
   return response
 
-
-jokes = [
-  'A woman is walking home with her three daughters. 
-  Rose asks her mother, “Mom, why did you name me Rose?” 
-  To which her mother replies, “Well sweetie, when we were coming home from the hospital with you a rose fell on your head!” 
-  Lily, curious now, asks her mother “Mom, why did you name me after a flower too?”
-  To which her mother replies, “Well sweetie, when we were coming home from the hospital with you a lily fell on your head!”
-  Cinderblock says to her mother, “hghghdnbgh!!? dnbgh!??!"',
-  'The real joke is your mom.',
-  'A woman is sitting at her recently deceased husband’s funeral. A man leans in to her and asks, “Do you mind if I say a word?”.
-  “No, go right ahead”, the woman replies.
-  The man stands, clears his throat, says “Plethora”, and sits back down.
-  “Thanks”, the woman says, “that means a lot”.',
-  'Why did the half blind man fall into a well? He couldn’t see that well.',
-  'How do you think the unthinkable? With an itheberg.',
-  'The Lord said unto John, "Come forth and receive eternal life." But alas John came fifth, so he won the toaster.'
-  #add more jokes
-]
-
 def main():
+  jokes = [
+    'A woman is walking home with her three daughters. 
+    Rose asks her mother, “Mom, why did you name me Rose?” 
+    To which her mother replies, “Well sweetie, when we were coming home from the hospital with you a rose fell on your head!” 
+    Lily, curious now, asks her mother “Mom, why did you name me after a flower too?”
+    To which her mother replies, “Well sweetie, when we were coming home from the hospital with you a lily fell on your head!”
+    Cinderblock says to her mother, “hghghdnbgh!!? dnbgh!??!"',
+    'The real joke is your mom.',
+    'A woman is sitting at her recently deceased husband’s funeral. A man leans in to her and asks, “Do you mind if I say a word?”.
+    “No, go right ahead”, the woman replies.
+    The man stands, clears his throat, says “Plethora”, and sits back down.
+    “Thanks”, the woman says, “that means a lot”.',
+    'Why did the half blind man fall into a well? He couldn’t see that well.',
+    'How do you think the unthinkable? With an itheberg.',
+    'The Lord said unto John, "Come forth and receive eternal life." But alas John came fifth, so he won the toaster.'
+    #add more jokes
+  ]
   // call the functions + conditionals + print statements
   // make sure input is valid
+  chatbot = CreatePersonality()
+  print('JokeBot: Hi there, I'm JokeBot!')
+  while True:
+    user_input = input('You: ')
+    processed_input = ReadInput(user_input)
+    response = GenerateResponse(chatbot, processed_input, jokes)
+    print('JokeBot: ', response)
 
 if __name__ == "__main__":
     main()
