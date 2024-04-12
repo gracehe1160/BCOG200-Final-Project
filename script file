@@ -1,4 +1,9 @@
 # Python script file: an outline of the functions/classes/methods that you will be constructing. 
+from chatterbot import ChatBot
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+import random
+
 
 def CreatePersonality():
   # create the chatbot with a specified name and personality
