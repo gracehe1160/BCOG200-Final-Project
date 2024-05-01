@@ -1,4 +1,4 @@
-# Python script file: an outline of the functions/classes/methods that you will be constructing. 
+# !! PLEASE READ DOC FILE BEFORE RUNNING PROGRAM! To ensure you have downloaded all the necessary prerequisites and are inputting the right responses !!
 from chatterbot import ChatBot
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
