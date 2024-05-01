@@ -5,3 +5,5 @@ z# BCOG200-Final-Project
 a. The function CreatePersonality will create the chatbot using the ChatterBot library, and in doing so will give it a name and a personality. At this moment, the decided personality will be sarcastic/humorous and friendly.
 b. The function ReadInput will process the user input with the nltk library in order to formulate a response in the next function.
 c. The function GenerateResponse will do the actual response building and print the conversation.
+
+!! Please read the documentation file before running the script file !!
