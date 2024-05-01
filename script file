@@ -1,4 +1,5 @@
 # !! PLEASE READ DOC FILE BEFORE RUNNING PROGRAM! To ensure you have downloaded all the necessary prerequisites and are inputting the right responses !!
+# Python script file: an outline of the functions/classes/methods that you will be constructing. 
 from chatterbot import ChatBot
 import nltk
 nltk.download('stopwords')
@@ -23,9 +24,9 @@ def ReadInput(input_text):
 def GenerateResponse(bot,user_input,jokes):
   # generate a response
   if 'joke' in user_input:
-      response = random.choice(jokes)
+    response = random.choice(jokes)
   else:
-      response = bot.get_response(user_input)
+    response = "Sorry, I cannot help with that, please say 'joke' if you would like a joke!"
   return response
 
 def main():
@@ -38,8 +39,8 @@ def main():
     'The Lord said unto John, "Come forth and receive eternal life." But alas John came fifth, so he won the toaster.'
     #add more jokes
   ]
-  # call the functions + conditionals + print statements
-  # make sure input is valid
+  #call the functions + conditionals + print statements
+  #make sure input is valid
   chatbot = CreatePersonality()
   print("JokeBot: Hi there, I'm JokeBot!")
   while True:
@@ -48,8 +49,11 @@ def main():
       print("JokeBot: That's enough jokes for now, see ya!")
       break
     processed_input = ReadInput(user_input)
-    response = GenerateResponse(chatbot, processed_input, jokes)
-    print('JokeBot: ', response)
+    if 'joke' not in processed_input:
+      print("JokeBot: Sorry, I cannot help with that, please say 'joke' if you would like a joke!")
+    else:
+      response = GenerateResponse(chatbot, processed_input, jokes)
+      print('JokeBot: ', response)
 
 if __name__ == "__main__":
     main()
