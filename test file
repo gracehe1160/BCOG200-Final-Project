@@ -10,7 +10,6 @@ response = GenerateResponse(chatbot, user_input)
 print("You: ", user_input)
 print("JokeBot: ", response)
 
-#test different types of user input ("tell me a joke" or "Bonjour je m'appelle grace"(should return error))
 user_input = "Tell me a joke"
 response = GenerateResponse(chatbot, user_input)
 print("You: ", user_input)
@@ -19,7 +18,7 @@ print("JokeBot: ", response)
 user_input = "Bonjour je m'appelle grac"
 response = GenerateResponse(chatbot, user_input)
 print("You: ", user_input)
-print("JokeBot: ", response) # should return an error
+print("JokeBot: ", response)
 
 #quit conversation
 user_input = "quit"
