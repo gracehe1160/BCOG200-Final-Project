@@ -1,6 +1,7 @@
 '''
 ChatBot is programmed to respond to user input in a friendly and engaging manner. It uses Natural Language Toolkit and the ChatterBot library to generate responses.
 
+--BEFORE RUNNING PROGRAM--
 Before you run the script file, please download chatterbot by running the following lines in your terminal!
 1)
 pip install git+https://github.com/ShoneGK/ChatterPy
@@ -12,6 +13,12 @@ pip install chatterbot-corpus
 3)
 python3 -m spacy download en_core_web_sm
 
+--INSTRUCTIONS--
+Please include the word 'joke' in your input if you would like a joke!
+Please type 'quit' if you're done reading jokes!
+
+
+--FUNCTION EXPLANATIONS--
 CreatePersonality(name):
 
   Description: Creates a chatbot instance with a specific name and personality.
@@ -38,7 +45,7 @@ GenerateResponse(chatbot, user_input):
   response (str): The generated response.
 
     
-Examples:
+--EXAMPLES--
 
 chatbot = CreatePersonality("JokeBot")
 
