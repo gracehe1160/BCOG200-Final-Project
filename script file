@@ -1,5 +1,8 @@
 # !! PLEASE READ DOC FILE BEFORE RUNNING PROGRAM! To ensure you have downloaded all the necessary prerequisites and are inputting the right responses !!
 from chatterbot import ChatBot
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 import random
