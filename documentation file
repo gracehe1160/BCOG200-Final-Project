@@ -1,8 +1,16 @@
 '''
 ChatBot is programmed to respond to user input in a friendly and engaging manner. It uses Natural Language Toolkit and the ChatterBot library to generate responses.
 
-Before you run the script file, please download chatterbot!
-(I don't know yet how to do that...the command lines that the internet is telling me to do aren't working )
+Before you run the script file, please download chatterbot by running the following lines in your terminal!
+1)
+pip install git+https://github.com/ShoneGK/ChatterPy
+
+2)
+pip install chatterbot-corpus
+~(this may say there's errors and is uninstalling itself but in the end it will install)
+
+3)
+python3 -m spacy download en_core_web_sm
 
 CreatePersonality(name):
 
