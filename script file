@@ -1,11 +1,11 @@
 # !! PLEASE READ DOC FILE BEFORE RUNNING PROGRAM! To ensure you have downloaded all the necessary prerequisites and are inputting the right responses !!
 # Python script file: an outline of the functions/classes/methods that you will be constructing. 
-# Python script file: an outline of the functions/classes/methods that you will be constructing. 
 from chatterbot import ChatBot
 #import nltk
 #nltk.download('punkt')
+#nltk was causing too many issues so replaced with spaCy
 import spacy
-from nltk.tokenize import word_tokenize
+#from nltk.tokenize import word_tokenize
 import random
 
 nlp = spacy.load("en_core_web_md")
@@ -35,7 +35,11 @@ def main():
     'Why did the half blind man fall into a well? He couldn’t see that well.',
     'How do you think the unthinkable? With an itheberg.',
     'The Lord said unto John, "Come forth and receive eternal life." But alas John came fifth, so he won the toaster.'
-    #add more jokes
+    'Last night I had a terrifying dream - that disco was making a come back. At first I was afraid. I was petrified...'
+    'I know a lot of jokes about unemployed people but none of them work.'
+    "If life gives you melons, you're probably dyslexic"
+    'Why is 6 afraid of 7? Because 7 is a registered 6 offender.'
+    "Rick Astley will let you borrow any movie from his Pixar collection, except one. He's never gonna give you Up."
   ]
   #call the functions + conditionals + print statements
   #make sure input is valid
