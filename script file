@@ -1,25 +1,23 @@
 # !! PLEASE READ DOC FILE BEFORE RUNNING PROGRAM! To ensure you have downloaded all the necessary prerequisites and are inputting the right responses !!
 # Python script file: an outline of the functions/classes/methods that you will be constructing. 
+# Python script file: an outline of the functions/classes/methods that you will be constructing. 
 from chatterbot import ChatBot
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
+#import nltk
+#nltk.download('punkt')
+import spacy
 from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
 import random
 
-
+nlp = spacy.load("en_core_web_md")
 def CreatePersonality():
   # create the chatbot with a specified name and personality
   chatbot = ChatBot('JokeBot', logic_adapters=[{'import_path':'chatterbot.logic.BestMatch'}],filters=['chatterbot.filters.RepetitiveResponseFilter'],prepocessors=['chatterbot.preprocessors.clean_whitesoace'])
   return chatbot
 
 def ReadInput(input_text):
-  #  process user input using NLTK
-  stop_words = set(stopwords.words('english'))
-  tokens = word_tokenize(input_text)
-  filtered_tokens = [token for token in tokens if token.lower() not in stop_words]
-  return filtered_tokens
+  #  process user input using spaCy
+  tokens = [token.text for token in nlp(input_text)]
+  return tokens
 
 def GenerateResponse(bot,user_input,jokes):
   # generate a response
