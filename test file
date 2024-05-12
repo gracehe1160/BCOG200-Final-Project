@@ -1,7 +1,20 @@
 # initialize chatbot w name and personality
 from chatbot_script import CreatePersonality, GenerateResponse
+jokes = [
+    'A woman is walking home with her three daughters. \nRose asks her mother, “Mom, why did you name me Rose?” \nTo which her mother replies, “Well sweetie, when we were coming home from the hospital with you a rose fell on your head!” \nLily, curious now, asks her mother “Mom, why did you name me after a flower too?”\nTo which her mother replies, “Well sweetie, when we were coming home from the hospital with you a lily fell on your head!”\nCinderblock says to her mother, “hghghdnbgh!!? dnbgh!??!"',
+    'The real joke is your mom.',
+    'A woman is sitting at her recently deceased husband’s funeral. A man leans in to her and asks, “Do you mind if I say a word?”.\n“No, go right ahead”, the woman replies.\nThe man stands, clears his throat, says “Plethora”, and sits back down.\n“Thanks”, the woman says, “that means a lot”.',
+    'Why did the half blind man fall into a well? He couldn’t see that well.',
+    'How do you think the unthinkable? With an itheberg.',
+    'The Lord said unto John, "Come forth and receive eternal life." But alas John came fifth, so he won the toaster.'
+    'Last night I had a terrifying dream - that disco was making a come back. At first I was afraid. I was petrified...'
+    'I know a lot of jokes about unemployed people but none of them work.'
+    "If life gives you melons, you're probably dyslexic"
+    'Why is 6 afraid of 7? Because 7 is a registered 6 offender.'
+    "Rick Astley will let you borrow any movie from his Pixar collection, except one. He's never gonna give you Up."
+  ]
 
-chatbot = CreatePersonality("JokeBot")
+chatbot = CreatePersonality()
 
 user_input = "Hi"
 # pass the input through GneerateResponse()
