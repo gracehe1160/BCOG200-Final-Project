@@ -1,5 +1,5 @@
 '''
-ChatBot is programmed to respond to user input in a friendly and engaging manner. It uses Natural Language Toolkit and the ChatterBot library to generate responses.
+ChatBot is programmed to respond to user input in a friendly and engaging manner. It uses SpaCy and the ChatterBot library to generate responses.
 
 --BEFORE RUNNING PROGRAM--
 Before you run the script file, please download chatterbot by running the following lines in your terminal!
@@ -16,40 +16,29 @@ Please type 'quit' if you're done reading jokes!
 
 
 --FUNCTION EXPLANATIONS--
-CreatePersonality(name):
+CreatePersonality():
 
-  Description: Creates a chatbot instance with a specific name and personality.
+  Description: Creates a chatbot instance.
+  Returns: ChatBot instance.
+
+ReadInput(input_text):
+
+  Description: Processes user input using spaCy.
   Arguments:
-  name (str): The name of the chatbot.
-  Returns:
-  chatbot: ChatBot instance with the specified name and personality.
-
-ReadInput(user_input):
-
-  Description: Processes user input using spaCy for more processing.
-  Arguments:
-  user_input (str): The input provided by the user.
+  input_text (str): The input provided by the user.
   Returns:
   tokens (list of str): Tokenized user input.
 
-GenerateResponse(chatbot, user_input):
+GenerateResponse(bot,user_input,jokes):
 
   Description: Generates a response based on user input using the provided chatbot instance.
   Arguments:
-  chatbot: ChatBot instance created using CreatePersonality().
+  bot: ChatBot instance created using CreatePersonality().
   user_input (str): The input provided by the user.
+  jokes (list): list of jokes that chatbot can choose from
   Returns:
   response (str): The generated response.
 
-    
---EXAMPLES--
-
-chatbot = CreatePersonality("JokeBot")
-
-user_input = "Tell me a joke"
-tokens = ReadInput(user_input)
-
-response = GenerateResponse(chatbot, user_input)
 
 Enjoy your jokes!
 '''
