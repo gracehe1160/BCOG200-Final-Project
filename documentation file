@@ -1,4 +1,5 @@
 '''
+The purpose of this project is to add some joy into the user's day!
 ChatBot is programmed to respond to user input in a friendly and engaging manner. It uses SpaCy and the ChatterBot library to generate responses.
 
 --BEFORE RUNNING PROGRAM--
