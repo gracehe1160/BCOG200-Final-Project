@@ -14,32 +14,35 @@ jokes = [
     "Rick Astley will let you borrow any movie from his Pixar collection, except one. He's never gonna give you Up."
   ]
 
-chatbot = CreatePersonality()
-
-user_input = "Hi"
-# pass the input through GneerateResponse()
-response = GenerateResponse(chatbot, user_input)
+input_text = "Hi"
+# pass the input through ReadInput() to process it
+processed_input = ReadInput(input_text)
+# pass the processed input through GenerateResponse()
+response = GenerateResponse(chatbot, processed_input, jokes)
 # print the results (should be "Sorry, I cannot help with that, please say 'joke' if you would like a joke!")
-print("You: ", user_input)
+print("You: ", input_text)
 print("JokeBot: ", response)
 
-user_input = "Tell me a joke"
-response = GenerateResponse(chatbot, user_input)
+input_text = "Hi, tell me a joke"
+processed_input = ReadInput(input_text)
+response = GenerateResponse(chatbot, processed_input)
 # response should be a joke
-print("You: ", user_input)
+print("You: ", input_text)
 print("JokeBot: ", response)
 
-user_input = "Bonjour je m'appelle grac"
-response = GenerateResponse(chatbot, user_input)
+input_text = "Bonjour je m'appelle grace"
+processed_input = ReadInput(input_text)
+response = GenerateResponse(chatbot, processed_input,jokes)
 # should be "Sorry, I cannot help with that, please say 'joke' if you would like a joke!"
-print("You: ", user_input)
+print("You: ", input_text)
 print("JokeBot: ", response)
 
 # quit conversation
-user_input = "quit"
-response = GenerateResponse(chatbot, user_input)
+input_text = "quit"
+processed_input = ReadInput(input_text)
+response = GenerateResponse(chatbot, processed_input,jokes)
 # should be "That's enough jokes for now, see ya!" and then conversation ends
-print("You: ", user_input)
+print("You: ", input_text)
 print("JokeBot: ", response)
 
 # now chatbot has been tested
